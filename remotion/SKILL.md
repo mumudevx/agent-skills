@@ -7,7 +7,7 @@ metadata:
 
 ## When to use
 
-Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
+Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge. This includes React Native component styling and NativeWind integration within Remotion compositions.
 
 ## Captions
 
@@ -59,3 +59,29 @@ Read individual rule files for detailed explanations and code examples:
 - [rules/parameters.md](rules/parameters.md) - Make a video parametrizable by adding a Zod schema
 - [rules/maps.md](rules/maps.md) - Add a map using Mapbox and animate it
 - [rules/voiceover.md](rules/voiceover.md) - Adding AI-generated voiceover to Remotion compositions using ElevenLabs TTS
+
+## React Native
+
+When working with React Native components in Remotion compositions, load the relevant rule files:
+
+- [rules/react-native/core-components.md](rules/react-native/core-components.md) - View, Text, Image, ScrollView usage in Remotion compositions
+- [rules/react-native/styling.md](rules/react-native/styling.md) - StyleSheet.create, inline styles, style prop in Remotion video render
+- [rules/react-native/flexbox-layout.md](rules/react-native/flexbox-layout.md) - Flexbox layout patterns for video composition sizing and positioning
+- [rules/react-native/typography.md](rules/react-native/typography.md) - Text component, font loading, text measurement in Remotion
+- [rules/react-native/images-media.md](rules/react-native/images-media.md) - Image component, video/audio assets — RN vs web Remotion comparison
+- [rules/react-native/platform-specific.md](rules/react-native/platform-specific.md) - Platform.OS, platform selectors, safe area in video render context
+- [rules/react-native/performance.md](rules/react-native/performance.md) - React.memo, useMemo, useCallback for video rendering optimizations
+- [rules/react-native/animations-integration.md](rules/react-native/animations-integration.md) - Why Reanimated must NOT be used — use Remotion's animation system instead
+
+## NativeWind
+
+When using NativeWind for styling Remotion components, load the relevant rule files:
+
+- [rules/nativewind/setup.md](rules/nativewind/setup.md) - NativeWind + Remotion project configuration (metro, babel, tailwind)
+- [rules/nativewind/classname-patterns.md](rules/nativewind/classname-patterns.md) - className prop usage, cn() helper, conditional classes in Remotion
+- [rules/nativewind/theming.md](rules/nativewind/theming.md) - CSS variables, design tokens, dark mode for video theme system
+- [rules/nativewind/responsive.md](rules/nativewind/responsive.md) - Breakpoints and responsive layout for different video resolutions
+- [rules/nativewind/states-interactions.md](rules/nativewind/states-interactions.md) - Interactive states in video context — use useCurrentFrame instead
+- [rules/nativewind/typography-spacing.md](rules/nativewind/typography-spacing.md) - Text classes, spacing system, gap for video composition typography
+- [rules/nativewind/borders-shadows.md](rules/nativewind/borders-shadows.md) - Border, rounded, shadow utilities for video element visual effects
+- [rules/nativewind/common-mistakes.md](rules/nativewind/common-mistakes.md) - Common pitfalls: StyleSheet + className mixing, Tailwind animations, className forwarding
