@@ -11,64 +11,63 @@ Reusable AI agent skill definitions for multiple tools. Install once, use across
 
 ## Installation
 
-### Prerequisites
-
-- macOS / Linux
-- Bash 4+
-
-### Quick Start
+### macOS / Linux
 
 ```bash
-# Clone the repo
 git clone https://github.com/mumudevx/agent-skills.git
 cd agent-skills
-
-# Make the installer executable
 chmod +x install.sh
 
 # Install all skills for all tools
 ./install.sh --tool all
-```
 
-### Install for a Specific Tool
-
-```bash
+# Single tool
 ./install.sh --tool claude
-./install.sh --tool gemini
-./install.sh --tool copilot
-./install.sh --tool antigravity
-```
 
-### Install a Specific Skill
-
-```bash
+# Single skill
 ./install.sh --tool claude --skill remotion
-```
 
-### List Available Skills
-
-```bash
+# List skills
 ./install.sh --list
+
+# Uninstall
+./install.sh --uninstall --tool claude
+./install.sh --uninstall --tool all
 ```
 
-## Uninstall
+### Windows (PowerShell)
 
-```bash
-# Remove from a specific tool
-./install.sh --uninstall --tool claude
+> Requires PowerShell 5.1+ and **Administrator** privileges (for symlink creation).
 
-# Remove from all tools
-./install.sh --uninstall --tool all
+```powershell
+git clone https://github.com/mumudevx/agent-skills.git
+cd agent-skills
+
+# Install all skills for all tools
+.\install.ps1 -Tool all
+
+# Single tool
+.\install.ps1 -Tool claude
+
+# Single skill
+.\install.ps1 -Tool gemini -Skill remotion
+
+# List skills
+.\install.ps1 -List
+
+# Uninstall
+.\install.ps1 -Uninstall -Tool claude
+.\install.ps1 -Uninstall -Tool all
 ```
 
 ## Supported Tools
 
-| Tool | Skill Directory |
-|------|----------------|
-| Claude Code | `~/.claude/skills/` |
-| Gemini CLI | `~/.gemini/skills/` |
-| GitHub Copilot | `~/.copilot/skills/` |
-| Antigravity | `~/.gemini/antigravity/skills/` |
+| Tool | macOS / Linux | Windows |
+|------|--------------|---------|
+| Claude Code | `~/.claude/skills/` | `%USERPROFILE%\.claude\skills\` |
+| Gemini CLI | `~/.gemini/skills/` | `%USERPROFILE%\.gemini\skills\` |
+| GitHub Copilot | `~/.copilot/skills/` | `%USERPROFILE%\.copilot\skills\` |
+| Antigravity | `~/.gemini/antigravity/skills/` | `%USERPROFILE%\.gemini\antigravity\skills\` |
 
 ## Adding a New Skill
 
